@@ -1,6 +1,9 @@
 # StoryChat
 An interactive fake-messaging app
 
+![Preview](https://i.imgur.com/9e4FKqu.png "Preview")
+
+
 A demo can be viewed [here](https://couldbejake.github.io/StoryChat/)
 
 
