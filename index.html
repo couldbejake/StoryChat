@@ -16,7 +16,10 @@
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./index.css">
+
   </head>
   <script type="text/javascript">
     function openFullscreen(elem) {
@@ -32,6 +35,7 @@
       }
   </script>
   <body class='noselect'>
+    <a class="github-fork-ribbon" href="https://github.com/couldbejake/StoryChat" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <div id='code-entrance'>
 
     </div>
@@ -49,7 +53,7 @@
                   <div class='col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 topbar-right'>
                     <!-- Possibly put something here in the future -->
                     <div style='width:100%;height:100%;text-align: right;'>
-                      <p style="font-family: 'whatsapp-font-light';font-size:15px;">stocktools.io</p>
+                      <p style="font-family: 'whatsapp-font-light';font-size:15px;"><!--stocktools.io--></p>
                     </div>
                   </div>
               </div>
@@ -58,9 +62,6 @@
         <div id="whatsapp-chat">
           <div id='whatsapp-messenger'>
             <video width="320" height="240" autoplay loop style='opacity:0.001;position:absolute;top:0px;left:0px;'>
-              <source src="stayawake-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
           </div>
           <div style='padding-bottom:350px;'></div>
         </div>
@@ -324,7 +325,7 @@
 
       // Disable forcing fullscreen
       if(isInProductionMode){
-        openFullscreen($('body').get(0))
+        //openFullscreen($('body').get(0))
       }
       chat.delta = $(this).attr('opt')
       chat.onUserStep( true )
@@ -442,7 +443,7 @@
       $( container ).find('#whatsapp-messenger').append( message_html )
 
       var app = $('#' + uuid).find('.message-row').get(0)
-      var typewriter = new Typewriter(app, { loop: false, delay: (isInProductionMode) ? 50 : 0 });
+      var typewriter = new Typewriter(app, { loop: false, delay: (isInProductionMode) ? 20 : 0 });
       var callback = function(){
         typewriter.stop()
         chat.writing_message = false
